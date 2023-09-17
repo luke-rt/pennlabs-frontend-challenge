@@ -1,0 +1,22 @@
+.card div {
+    width: 97%;
+    height: 60px;
+    padding: 12px;
+    margin-left: 2px;
+    overflow-wrap: anywhere;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.card div:hover {
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+.card.active div {
+    background-color: lightgray;
+}
+
+.card {
+    color: black;
+}
+

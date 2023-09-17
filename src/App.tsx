@@ -1,22 +1,36 @@
-import './App.css';
+import { useState } from "react";
+import { Course } from "./lib/types";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Home from "./routes/home";
+import Checkout from "./routes/checkout";
+import { CartContext } from "./lib/context";
 
-import Nav from './components/Nav';
-import Courses from './components/Courses';
-import Cart from './components/Cart';
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />
+  },
+  {
+    path: "/course/:courseDept/:courseNumber",
+    element: <Home />
+  },
+  {
+    path: "/checkout",
+    element: <Checkout />
+  },
+]);
 
-function App() {
-  return (
-    <>
-      <Nav />
-      <div style={{
-        width: '100%',
-        boxSizing: 'border-box',
-        padding: '0 calc(1rem + 10%)',
+const App = () => {
+  const [cart, setCart] = useState([] as Course[]);
+
+  return(
+    <CartContext.Provider value={{ cart, setCart }}>
+      <main style={{
+        height: '100vh',
       }}>
-        <Courses />
-        <Cart />
-      </div>
-    </>
+        <RouterProvider router={router} />
+      </main>
+    </CartContext.Provider>
   );
 }
 

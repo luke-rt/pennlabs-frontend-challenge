@@ -1,0 +1,23 @@
+nav {
+    height: 35px;
+    padding: 1rem;
+    background-color: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+nav div {
+    display: float;
+}
+
+nav h2 {
+    float: left;
+}
+
+nav h3 {
+    color: black;
+    float: right;
+}
+
+nav h3:hover {
+    color: gray;
+}

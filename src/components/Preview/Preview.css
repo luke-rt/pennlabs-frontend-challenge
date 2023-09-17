@@ -1,0 +1,8 @@
+.preview {
+    padding: 40px;
+    border-inline: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.preview p {
+    padding-block: 30px;
+}
