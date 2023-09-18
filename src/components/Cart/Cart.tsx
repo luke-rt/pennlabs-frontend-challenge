@@ -3,6 +3,7 @@ import type { Course } from "../../lib/types";
 import Card from "../Card/Card";
 import { CartContext } from "../../lib/context";
 import "./Cart.css";
+import { getId } from "../../lib/utils";
 
 const Cart = () => {
   const { cart } = useContext(CartContext);
@@ -12,7 +13,7 @@ const Cart = () => {
     <div id="cart">
       <h4>{title}</h4>
       {cart.map((course: Course) => (
-        <Card key={`${course.dept}${course.number}`} course={course} active={false} />
+        <Card key={`${getId(course)}`} course={course} active={false} />
       ))}
     </div>
   );

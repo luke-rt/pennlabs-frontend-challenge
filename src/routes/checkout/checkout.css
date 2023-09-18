@@ -1,3 +1,18 @@
-.cart-checkout {
-    margin-inline: 20vw;
+.checkout, .receipt {
+    margin-inline: 30vw;
+    padding-bottom: 3vh;
+    text-align: center;
+}
+
+.checkout, .receipt h1 {
+    margin-block: 20px;
+}
+
+.checkout-cart {
+    margin-block: 40px;
+}
+
+.receipt h4 {
+    background-color: lightslategray;
+    padding-block: 8px;
 }

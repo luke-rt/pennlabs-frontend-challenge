@@ -1,4 +1,16 @@
 #courses {
     max-height: 100%;
     overflow-y: scroll;
+    align-items: center;
+}
+
+#courses input {
+    border: 1px solid gray;
+    width: 93%;
+    padding: 10px 3px;
+    margin: 10px 5px;
+}
+
+#courses input:focus {
+    outline: none;
 }
