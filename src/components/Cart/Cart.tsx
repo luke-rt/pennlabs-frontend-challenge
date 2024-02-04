@@ -8,7 +8,7 @@ import { getId } from "../../lib/utils";
 const Cart = () => {
   const { cart } = useContext(CartContext);
 
-  const title = cart.length === 7 ? "Course Cart (Full)" : "Course Cart";
+  const title = cart.length === 7 ? "Course Cart (Full)" : `Course Cart (${cart.length} c.u.)`;
   return(
     <div id="cart">
       <h4>{title}</h4>

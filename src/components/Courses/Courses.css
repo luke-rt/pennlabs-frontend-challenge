@@ -1,16 +1,41 @@
-#courses {
-    max-height: 100%;
+#left {
+
     overflow-y: scroll;
-    align-items: center;
 }
 
-#courses input {
-    border: 1px solid gray;
+#left #courses {
+    align-items: center;
+    overflow-x: hidden;
+}
+
+#left #courses input:focus {
+    outline: none;
+}
+
+#left #search {
+    position: sticky;
+    top: 0;
+    background-color: #990000;
+}
+
+#left #search input {
+    border: none;
+    border-bottom: 3px solid white;
+    background-color: #990000;
+    color: white;
+    font-size: 1.2em;
+    outline-color: transparent;
     width: 93%;
     padding: 10px 3px;
     margin: 10px 5px;
 }
 
-#courses input:focus {
+#left #search input:focus {
     outline: none;
 }
+
+#left #search input::placeholder {
+    color: lightgray;
+}
+
+

@@ -8,44 +8,35 @@ import Cart from "../../components/Cart/Cart";
 function Home() {
   const params = useParams();
 
+  let course;
+  let courseDept: string;
+  let courseNumber: string;
   if(params.courseDept && params.courseNumber) {
-    let courseNumber = params.courseNumber;
-    let courseDept = params.courseDept;
+    courseNumber = params.courseNumber;
+    courseDept = params.courseDept;
 
-    let course = courses.filter((course) => course.dept === courseDept && course.number === parseInt(courseNumber))[0];
+    course = courses.filter((course) => course.dept === courseDept && course.number === parseInt(courseNumber))[0];
 
-    return (
-      <>
-        <Nav />
-        <div style={{
-          height: 'calc(100% - 4rem)',
-          boxSizing: 'border-box',
-          display: 'grid',
-          gridTemplateColumns: '1fr 3fr 1fr',
-        }}>
-        <Courses current={`${courseDept}${courseNumber}`} />
-          <Preview course={course} />
-        <Cart />
-        </div>
-      </>
-    );
   } else {
-    return (
-      <>
-        <Nav />
-        <div style={{
-          height: 'calc(100% - 4rem)',
-          boxSizing: 'border-box',
-          display: 'grid',
-          gridTemplateColumns: '1fr 3fr 1fr',
-        }}>
-          <Courses current="" />
-            <Preview course={courses[0]} />
-          <Cart />
-        </div>
-      </>
-    );
+    course = courses[0];
+    courseDept = course.dept;
+    courseNumber = course.number.toString();
   }
+  return (
+    <>
+      <Nav />
+      <div style={{
+        height: 'calc(100% - 4rem)',
+        boxSizing: 'border-box',
+        display: 'grid',
+        gridTemplateColumns: '2fr 5fr 2fr',
+      }}>
+      <Courses current={`${courseDept}${courseNumber}`} />
+        <Preview course={course} />
+      <Cart />
+      </div>
+    </>
+  );
 }
 
 export default Home;

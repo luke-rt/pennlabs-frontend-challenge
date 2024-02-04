@@ -28,17 +28,22 @@ const Courses = ({current}: Props) => {
 
   return(
     <>
-      <div id="courses">
+    <div id="left">
+      <div id="search">
         <input
           type="text"
-          placeholder="Search here"
+          placeholder="Title, Subject, Keyword"
           onChange={handleChange}
           value={searchInput}
         />
+      </div>
+      <div id="courses">
         {filteredCourses.map((course: Course) => (
           <Card key={`${getId(course)}`} course={course} active={`${getId(course)}` === current} />
         ))}
       </div>
+    </div>
+      
     </>
   );
 }

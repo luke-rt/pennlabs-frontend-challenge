@@ -1,12 +1,15 @@
 button {
-    background-color: #30a444;
-    border: 1px solid #31bd49;
+    background-color: #011F3B;
+    border: none;
     border-radius: 5px;
-    padding: 10px;
+    padding-block: 15px;
+    width: 200px;
     box-shadow: 3px 3px 10px lightgray;
+    color: whitesmoke;
+    font-size: 1.2em;
+    font-weight: bolder;
 }
 
 button:hover {
-    background-color: #31bd49;
     cursor: pointer;
 }
