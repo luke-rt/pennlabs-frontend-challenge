@@ -1,6 +1,6 @@
 import Button from "../../components/Button/Button";
 import Cart from "../../components/Cart/Cart";
-import {useNavigate, useSearchParams} from "react-router-dom";
+import { useSearchParams} from "react-router-dom";
 import "./checkout.css";
 import { useContext } from "react";
 import { CartContext } from "../../lib/context";

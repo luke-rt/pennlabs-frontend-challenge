@@ -9,6 +9,14 @@ const Cart = () => {
   const { cart } = useContext(CartContext);
 
   const title = cart.length === 7 ? "Course Cart (Full)" : `Course Cart (${cart.length} c.u.)`;
+  if(cart.length === 0) {
+    return(
+      <div id="cart">
+        <h4>{title}</h4>
+        <p>Your cart is empty</p>
+      </div>
+    );
+  }
   return(
     <div id="cart">
       <h4>{title}</h4>

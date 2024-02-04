@@ -6,3 +6,8 @@
     background-color: lightslategray;
     padding-block: 8px;
 }
+
+#cart p {
+    color: gray;
+    padding-top: 40vh;
+}
